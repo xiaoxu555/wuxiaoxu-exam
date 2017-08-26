@@ -1,0 +1,23 @@
+<button (click)="addProduct()" style="width:10%;">添加新商品</button>
+<button (click)="asc()" style="width:10%;">正序</button>
+<button (click)="desc()" style="width:10%;">逆序</button>
+<button (click)="random()" style="width:10%;">随机</button>
+
+<ul>
+    <table class="gridtable" style="width:100%;" border="1">
+        <tr style="background-color:darksalmon">
+            <th>索引</th>
+            <th>商品名</th>
+            <th>商品售出数量</th>
+            <th>商品价格</th>
+        </tr>
+        <tr *ngFor="let user of products">
+
+            <td>{{user.index}}</td>
+            <td>{{user.productName}}</td>
+            <td>{{user.number}}</td>
+            <td>{{user.price}}</td>
+        </tr>
+    </table>
+
+</ul>
